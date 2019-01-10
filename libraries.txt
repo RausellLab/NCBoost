@@ -1,0 +1,9 @@
+# install Python 3.6 libraries:
+tqdm==4.23.4
+pytabix==0.1 
+pandas==0.20.1
+re==2.2.1
+numpy==1.12.1
+vcf==0.6.8
+decimal==1.70
+
