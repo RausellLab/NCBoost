@@ -92,7 +92,7 @@ with open(inF, 'r') as f, open(outF, 'w') as o:
 		standard = t[0:43]
 		extra = t[43:len(t)]
 		if chrom != "Y": 
-            gnomadAF = vcf.Reader(filename='/data/project_yufei/protein_truncating_variants/homo/gnomad_data/genome/vcf/gnomad.genomes.r2.0.2.sites.chr{}.vcf.bgz'.format(chrom), compressed=True)
+            gnomadAF = vcf.Reader(filename='NCBoost_features/gnomad.genomes.r2.0.2.sites.chr{}.vcf.bgz'.format(chrom), compressed=True)
             # af of the 1KB region
             # 500nt left part
             left_gmafL, left_mafL, left_maf_afrL, left_maf_amrL, left_maf_asjL, left_maf_easL, left_maf_finL, left_maf_nfeL, left_maf_othL = listFromRegion(chrom, pos-501, pos-1, gnomadAF)
