@@ -16,29 +16,29 @@ tabix -p bed $folder/het_rates.bed.gz
 ### 1000GP FuLi's D* and F*, vcf, 1-based
 ## FuLisD
 for data in CEU CHB YRI; do
-  gzip -d FuLisD_$data.whole_genome.pvalues.gz
-  cut -d" " -f2- FuLisD_$data.whole_genome.pvalues > FuLisD_$data.whole_genome.pvalues_tmp.vcf
-  awk -v OFS="\t" '$1=$1' FuLisD_$data.whole_genome.pvalues_tmp.vcf > FuLisD_$data.whole_genome.pvalues.vcf
-  bgzip FuLisD_$data.whole_genome.pvalues.vcf
-  tabix -p vcf -S 1 -f FuLisD_$data.whole_genome.pvalues.vcf.gz
+  gzip -d $folder/FuLisD_$data.whole_genome.pvalues.gz
+  cut -d" " -f2- $folder/FuLisD_$data.whole_genome.pvalues > $folder/FuLisD_$data.whole_genome.pvalues_tmp.vcf
+  awk -v OFS="\t" '$1=$1' $folder/FuLisD_$data.whole_genome.pvalues_tmp.vcf > $folder/FuLisD_$data.whole_genome.pvalues.vcf
+  bgzip $folder/FuLisD_$data.whole_genome.pvalues.vcf
+  tabix -p vcf -S 1 -f $folder/FuLisD_$data.whole_genome.pvalues.vcf.gz
 done
 
 ## FuLisF
 for data in CEU CHB YRI; do
-  gzip -d FuLisF_$data.whole_genome.pvalues.gz
-  cut -d" " -f2- FuLisF_$data.whole_genome.pvalues > FuLisF_$data.whole_genome.pvalues_tmp.vcf
-  awk -v OFS="\t" '$1=$1' FuLisF_$data.whole_genome.pvalues_tmp.vcf > FuLisF_$data.whole_genome.pvalues.vcf
-  bgzip FuLisF_$data.whole_genome.pvalues.vcf
-  tabix -p vcf -S 1 -f FuLisF_$data.whole_genome.pvalues.vcf.gz
+  gzip -d $folder/FuLisF_$data.whole_genome.pvalues.gz
+  cut -d" " -f2- $folder/FuLisF_$data.whole_genome.pvalues > $folder/FuLisF_$data.whole_genome.pvalues_tmp.vcf
+  awk -v OFS="\t" '$1=$1' $folder/FuLisF_$data.whole_genome.pvalues_tmp.vcf > $folder/FuLisF_$data.whole_genome.pvalues.vcf
+  bgzip $folder/FuLisF_$data.whole_genome.pvalues.vcf
+  tabix -p vcf -S 1 -f $folder/FuLisF_$data.whole_genome.pvalues.vcf.gz
 done
 
 ## TajimasD
 for data in CEU CHB YRI; do
-  gzip -d TajimasD_$data.whole_genome.pvalues.gz
-  cut -d" " -f2- TajimasD_$data.whole_genome.pvalues > TajimasD_$data.whole_genome.pvalues_tmp.vcf
-  awk -v OFS="\t" '$1=$1' TajimasD_$data.whole_genome.pvalues_tmp.vcf > TajimasD_$data.whole_genome.pvalues.vcf
-  bgzip TajimasD_$data.whole_genome.pvalues.vcf
-  tabix -p vcf -S 1 -f TajimasD_$data.whole_genome.pvalues.vcf.gz
+  gzip -d $folder/TajimasD_$data.whole_genome.pvalues.gz
+  cut -d" " -f2- $folder/TajimasD_$data.whole_genome.pvalues > $folder/TajimasD_$data.whole_genome.pvalues_tmp.vcf
+  awk -v OFS="\t" '$1=$1' $folder/TajimasD_$data.whole_genome.pvalues_tmp.vcf > $folder/TajimasD_$data.whole_genome.pvalues.vcf
+  bgzip $folder/TajimasD_$data.whole_genome.pvalues.vcf
+  tabix -p vcf -S 1 -f $folder/TajimasD_$data.whole_genome.pvalues.vcf.gz
 done
 
 rm *pvalues
