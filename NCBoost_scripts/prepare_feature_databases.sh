@@ -41,8 +41,8 @@ for data in CEU CHB YRI; do
   tabix -p vcf -S 1 -f $folder/TajimasD_$data.whole_genome.pvalues.vcf.gz
 done
 
-rm *pvalues
-rm *tmp.vcf
+rm $folder/*pvalues
+rm $folder/*tmp.vcf
 
 
 ### CDTS, bed, 0-based
