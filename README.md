@@ -8,10 +8,10 @@ Of note, the NCBoost software can score any type of genomic position, provided t
 
 We precomputed the NCBoost score for 857'825'085 non-coding genomic positions overlapping intronic, 5'UTR, 3'UTR, upstream and downstream regions -i.e. closer than 1kb from the Transcription Start Site (TSS) and the Transcription End Site (TSE), respectively- associated with a background set of [18404 protein-coding genes](https://github.com/RausellLab/NCBoost/blob/master/NCBoost_data/NCBoost_geneDB.tsv) for which we could retrieve annotation features. Variant mapping and annotation of non-coding genomic positions was done through [ANNOVAR](http://annovar.openbioinformatics.org/en/latest/user-guide/download/) software using the gene-based annotation option based on RefSeq (assembly version hg19). In the case of positions overlapping several types of regions associated with different genes and transcripts (either coding or non-coding), a number of criteria were adopted as described in the [NCBoost paper](https://rdcu.be/bmlxX).
 
-The precomputed NCBoost scores in proximal cis-regulatory regions of protein-coding genes can be downloaded [here](https://storage.googleapis.com/ncboost/ncboost_score_hg19_v20190108.tsv.gz) as a tabix indexed file (gz):
-https://storage.googleapis.com/ncboost/ncboost_score_hg19_v20190108.tsv.gz  
-and the corresponding index file is available [here](https://storage.googleapis.com/ncboost/ncboost_score_hg19_v20190108.tsv.gz.tbi) (gz.tbi):
-https://storage.googleapis.com/ncboost/ncboost_score_hg19_v20190108.tsv.gz.tbi
+The precomputed NCBoost scores in proximal cis-regulatory regions of protein-coding genes can be downloaded [here](https://storage.googleapis.com/ncboost-cbl/ncboost_score_hg19_v20190108.tsv.gz) as a tabix indexed file (gz):
+https://storage.googleapis.com/ncboost-cbl/ncboost_score_hg19_v20190108.tsv.gz
+and the corresponding index file is available [here](https://storage.googleapis.com/ncboost-cbl/ncboost_score_hg19_v20190108.tsv.gz.tbi) (gz.tbi):
+https://storage.googleapis.com/ncboost-cbl/ncboost_score_hg19_v20190108.tsv.gz.tbi
 
 The file contains the following columns:  
 *chr*, chromosome name, as [1:22,X,Y]  
